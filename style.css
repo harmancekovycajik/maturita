@@ -1,0 +1,786 @@
+* {
+    /*margin: 0;*/
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(21, 21, 21);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.page-wrapper main {
+    flex: 1;
+}
+
+/* =========================================
+   HEADER (NAVBAR)
+========================================= */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgb(10, 10, 10);
+
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    height: 5rem;
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+
+    font-size: 1.25rem;
+    font-weight: 900;
+    font: bold;
+}
+
+.kosik {
+    text-decoration: none;
+    color: white;
+
+    font-size: 1.25rem;
+    font-weight: 900;
+    font: bold;
+    transition: 250ms;
+}
+
+.nav-end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1em;
+}
+
+.kosik:hover {
+    color: burlywood;
+}
+
+.kosik.active {
+    text-decoration: none;
+    color: burlywood;
+    font-size: 1.25rem;
+    font-weight: 900;
+    font: bold;
+    transition: 250ms;
+}
+
+#bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2.5rem 5rem;
+}
+
+#bar li {
+    list-style: none;
+
+    padding: 0 3.125rem;
+    display: inline-block;
+    position: relative;
+}
+
+#bar li a {
+    text-decoration: none;
+    font-size: 1.125rem;
+    color: white;
+    transition: 250ms;
+}
+
+#bar li a:hover,
+#bar li a.active {
+    color: burlywood;
+}
+
+/* =========================================
+   NADPISY - .nadpis_bar
+========================================= */
+.nadpis_bar h4 {
+    color: white;
+    font-size: 1.875rem;
+    text-align: center;
+    cursor: default;
+}
+
+.nadpis_bar h2 {
+    color: white;
+    font-size: 3.125rem;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 0.625rem;
+    cursor: default;
+}
+
+.nadpis_bar p {
+    color: white;
+    font-size: 1.563rem;
+    text-align: center;
+    cursor: default;
+}
+
+/* =========================================
+   BANNERY (#home_bar, #vinyl_bar atď.)
+========================================= */
+#home_bar {
+    background-image: url("images/index/nadpis_bar.jpg");
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    background-position-x: left;
+    background-position-y: 60%;
+    background-color: rgb(21, 21, 21);
+    padding: 6.25rem;
+}
+
+#vinyl_bar {
+    background-image: url("images/index/vinyl_bar.jpg");
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    background-position-x: left;
+    background-position-y: 60%;
+    background-color: rgb(21, 21, 21);
+    padding: 6.25rem;
+}
+
+#cd_bar {
+    background-image: url("images/index/cd_bar.jpg");
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    background-position-x: left;
+    background-position-y: 60%;
+    background-color: rgb(21, 21, 21);
+    padding: 6.25rem;
+}
+
+#tricko_bar {
+    background-image: url("images/index/tricka_bar.jpg");
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    background-position-x: left;
+    background-position-y: 50%;
+    background-color: rgb(21, 21, 21);
+    padding: 6.25rem;
+}
+
+#mikina_bar {
+    background-image: url("images/index/mikiny_bar.jpg");
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    background-position-x: left;
+    background-position-y: 50%;
+    background-color: rgb(21, 21, 21);
+    padding: 6.25rem;
+}
+
+/* =========================================
+   HLAVNÝ PRODUKT 
+========================================= */
+#hlavny-produkt {
+    text-align: center;
+    padding-top: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hlavny-produkt .produkt-kontainer {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.popis span {
+    color: white;
+    font-size: 1.063rem;
+    padding-top: 0.438rem;
+}
+
+.popis h6 {
+    color: white;
+    font-size: 0.938rem;
+    padding: 0.438rem;
+}
+
+.popis h5 {
+    color: white;
+    font-size: 1.25rem;
+}
+
+#hlavny-produkt .produkt {
+    width: 23%;
+    min-width: 6.25rem;
+    padding: 0.625rem 0.75rem;
+    cursor: pointer;
+    transition: 250ms;
+    border: transparent;
+    border-radius: 0.625rem;
+    padding-top: 6.25rem;
+}
+
+#hlavny-produkt .produkt img {
+    width: 100%;
+}
+
+#hlavny-produkt .produkt:hover {
+    transform: scale(1.02);
+}
+
+/* =========================================
+   DETAIL PRODUKTU (#produkt-detaily)
+========================================= */
+#produkt-detaily {
+    display: flex;
+    margin-top: 5.625rem;
+    padding-left: 1.25rem;
+}
+
+#produkt-detaily .single-produkt-img {
+    width: 50%;
+    padding-top: 5rem;
+    transition: 250ms;
+    border: transparent;
+    border-radius: 0px;
+}
+
+#produkt-detaily .single-produkt-img:hover {
+    transform: scale(1.02);
+}
+
+#produkt-detaily .single-produkt-detaily {
+    width: 65%;
+    padding-top: 3.75rem;
+    padding-left: 5.625rem;
+    padding-right: 18.75rem;
+}
+
+#produkt-detaily .single-produkt-detaily .produkt-interpret {
+    color: white;
+    font-size: 1.875rem;
+    transition: 250ms;
+}
+
+#produkt-detaily .single-produkt-detaily .produkt-interpret:hover {
+    color: burlywood;
+    cursor: pointer;
+}
+
+#produkt-detaily .single-produkt-detaily .produkt-popis {
+    color: white;
+    font-size: 2.188rem;
+    padding-top: 2.5rem;
+}
+
+#produkt-detaily .single-produkt-detaily h5 {
+    color: white;
+    font-size: 1.875rem;
+    padding-top: 0.625rem;
+    padding-bottom: 2.5rem;
+}
+
+#produkt-detaily .single-produkt-detaily h4 {
+    color: white;
+    font-size: 2.188rem;
+    padding-top: 2.5rem;
+    padding-bottom: 1.875rem;
+}
+
+#produkt-detaily .single-produkt-detaily span {
+    color: white;
+    padding-top: 1.875rem;
+    font-size: 1.25rem;
+}
+
+#produkt-detaily .single-produkt-detaily span:hover {
+    cursor: text;
+}
+
+.single-produkt-detaily form .select {
+    margin-bottom: 1.875rem;
+}
+
+.single-produkt-detaily form select {
+    display: block;
+    appearance: none;
+    -webkit-appearance: none;
+    width: auto;
+    font-size: 1.25rem;
+    background-color: rgb(18, 18, 18);
+    color: white;
+    border: transparent;
+    border-width: 1px;
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+    transition: 250ms;
+    text-align: center;
+}
+
+.single-produkt-detaily form select:focus {
+    outline: none;
+}
+
+.single-produkt-detaily form .input {
+    padding-bottom: 1.875rem;
+}
+
+.single-produkt-detaily form input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 3.75rem;
+    height: 1.875rem;
+    text-align: center;
+    font-size: 1.25rem;
+    color: white;
+    background-color: rgb(18, 18, 18);
+    border: transparent;
+    border-width: 1px;
+    border-radius: 0.438rem;
+    padding-left: 0.688rem;
+    transition: 250ms;
+}
+
+.single-produkt-detaily input:focus {
+    outline: none;
+}
+
+.single-produkt-detaily button {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: rgb(18, 18, 18);
+    color: white;
+    font-size: 1.5rem;
+    border: transparent;
+    padding: 0.938rem 0.625rem;
+    border-radius: 0.625rem;
+    transition: 250ms;
+}
+
+.single-produkt-detaily button:hover {
+    cursor: pointer;
+    color: burlywood;
+    transform: scale(1.02);
+}
+
+.single-produkt-detaily input:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.single-produkt-detaily select:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+/* =========================================
+   NADPISY (.snadpis, .home-nadpis)
+========================================= */
+.snadpis {
+    color: white;
+    font-size: 2.5rem;
+    padding-top: 2.5rem;
+}
+
+.home-nadpis {
+    padding-top: 3.75rem;
+    color: white;
+    font-size: 3.125rem;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    background-color: rgb(21, 21, 21);
+    color: white;
+    padding: 1rem 5.625rem;
+}
+
+footer .col-f h4 {
+    font-size: 1.25rem;
+    padding-bottom: 1.25rem;
+    transition: 250ms;
+}
+
+footer .col-f p strong {
+    font-size: 1.25rem;
+}
+
+footer .col-f p {
+    font-size: 1.25rem;
+}
+
+footer .col-f h5 {
+    text-align: center;
+    padding-top: 1.25rem;
+}
+
+/* =========================================
+   KONTAKT
+========================================= */
+#kontakt-detaily-s {
+    min-height: calc(100vh - 80px - 80px - 50px);
+    padding-left: 160px;
+    padding-right: 100px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+}
+
+.mapa iframe {
+    border: 0;
+    border-radius: 10px;
+}
+/* ================================
+   PÔVODNÝ KOŠÍK (TABUĽKA)
+   + CENTROVANIE SÚČTU A BUTTONU
+================================ */
+
+#kosik_id {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+#kosik_id table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    white-space: nowrap;
+    margin-top: 2rem;
+}
+
+#kosik_id table tr td {
+    padding: 1rem;
+    vertical-align: middle;
+    color: white;
+}
+
+#kosik_id table img {
+    width: 18.75rem;
+    transition: 250ms;
+}
+
+#kosik_id table img:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+#kosik_id table a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.563rem;
+    font-weight: 300;
+    transition: 250ms;
+    margin-left: 4.375rem;
+}
+
+#kosik_id table a:hover {
+    color: burlywood;
+    cursor: pointer;
+}
+
+#kosik_id table p {
+    font-size: 1.25rem;
+    color: white;
+}
+
+#kosik_id table input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 3.75rem;
+    height: 1.875rem;
+    text-align: center;
+    font-size: 1.25rem;
+    color: white;
+    background-color: rgb(14, 14, 14);
+    border: transparent;
+    border-width: 1px;
+    border-radius: 0.438rem;
+    padding-left: 0.688rem;
+}
+#kosik_id table input:focus {
+    outline: none;
+}
+
+#sucet {
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 400px;
+}
+
+#sucet table {
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#sucet table td {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    color: white;
+}
+
+#sucet h2,
+#sucet h2 a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.button_kosik {
+    display: block;
+    margin: 2rem auto;
+    background-color: rgb(18, 18, 18);
+    color: white;
+    font-size: 1.1vw;
+    border: transparent;
+    height: 3rem;
+    padding: 0 5rem;
+    border-radius: 0.625rem;
+    transition: 250ms;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button_kosik:hover {
+    cursor: pointer;
+    color: burlywood;
+    transform: scale(1.02);
+}
+
+/* =========================================
+   CHECKOUT 
+========================================= */
+
+.form {
+    width: 100%;
+}
+
+#checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 5vh auto;
+    padding: 0 1rem;
+}
+
+.checkout_nadpis h2 {
+    color: white;
+    text-align: center;
+    font-size: 3vh;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.checkout_nadpis a {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+    text-decoration: none;
+    transition: 250ms;
+    font-size: 1.3vh;
+}
+.checkout_nadpis a:hover {
+    color: burlywood;
+}
+
+.line {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+#checkout_faktura {
+    margin: 2vh auto 4vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: transparent;
+    border-radius: 2vh;
+    padding: 2rem;
+    max-width: 1100px;
+    width: 90%;
+}
+
+#checkout_faktura h2,
+#checkout_faktura h3 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-weight: 300;
+}
+#checkout_faktura h3 {
+    font-size: 2.5vh;
+}
+#checkout_faktura h2 {
+    font-size: 3vh;
+}
+
+#checkout_faktura input,
+#checkout_faktura select {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 700px;
+    margin: 0.5rem 0;
+    background-color: rgb(14, 14, 14);
+    color: white;
+    border: transparent;
+    border-radius: 1.1vh;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    min-height: 3rem;
+    display: block;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+#checkout_faktura input {
+    text-align: left;
+    padding: 0.8rem 1.5rem;
+    white-space: normal;
+    overflow-x: visible;
+}
+
+#checkout_faktura select {
+    text-align: center;
+    text-align-last: center;
+    padding: 0.8rem 1.5rem;
+}
+
+#checkout_faktura select option {
+    text-align: center;
+}
+
+#checkout_faktura label {
+    color: white;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+.button_platba {
+    display: block;
+    margin: 2rem auto;
+    background-color: rgb(18, 18, 18);
+    color: white;
+    font-size: 1vw;
+    border: transparent;
+    height: auto;
+    padding: 0.8rem 4.5rem;
+    border-radius: 10px;
+    transition: 250ms;
+    text-align: center;
+}
+
+.button_platba:hover {
+    cursor: pointer;
+    color: burlywood;
+    transform: scale(1.02);
+}
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+}
+
+#checkout_potvrdenie {
+    margin: 6vh auto 4vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    padding: 2rem;
+    border: transparent;
+    border-radius: 2vh;
+    color: white;
+    text-align: center;
+}
+
+#checkout_pot {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+
+#checkout_potvrdenie h3 {
+    font-size: 2rem;
+    color: white;
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+    font-weight: 300;
+}
+
+#checkout_potvrdenie h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.message {
+    width: max-content;
+    color: green;
+    font-size: 2rem;
+    padding-right: 36rem;
+    text-align: center;
+}
+
+@media (max-width: 1400px) {
+    #bar {
+        padding: 20px 40px;
+    }
+
+    #bar li {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    #header {
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    #bar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    #bar li {
+        padding: 0 15px;
+        margin-bottom: 10px;
+    }
+}
