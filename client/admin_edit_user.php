@@ -130,7 +130,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <select name="is_admin" id="is_admin" class="form-control">
                           <option disabled selected hidden>Vyberte možnosť
                           </option>
-
                           <option <?= $user->is_admin == '1' ? 'selected' : '' ?> value="1">
                             Yes
                           </option>
